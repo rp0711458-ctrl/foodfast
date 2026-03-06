@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/signup",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/login",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/user/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/products",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/orders",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/feedback",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/restaurants(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/search",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
