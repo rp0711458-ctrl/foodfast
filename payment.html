@@ -326,7 +326,7 @@ document.getElementById('paymentForm').addEventListener('submit', async (e) => {
     
     try {
         // Save order to database
-        const response = await fetch('http://localhost:3000/orders', {
+        const response = await fetch('https://foodfast-website.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -76,7 +76,7 @@ function updateNavigation() {
 // Load orders from database
 async function loadOrders() {
     try {
-        const response = await fetch(`http://localhost:3000/user/orders/${userId}`);
+        const response = await fetch(`https://foodfast-website.vercel.app/user/orders/${userId}`);
         const data = await response.json();
         
         if (!data.orders || data.orders.length === 0) {
